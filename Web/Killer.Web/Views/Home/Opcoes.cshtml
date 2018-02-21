@@ -1,0 +1,69 @@
+﻿@using Killer.Core.DomainModel
+
+@model Assassinato
+
+
+@{
+    ViewBag.Title = "Qual foi o autor, o local e a arma do crime?";
+}
+
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <fieldset>
+            @Html.ValidationSummary(true, "Erros encontrados", new { @class = "text-danger" })
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Suspeito)
+                        @Html.DropDownListFor(x => x.Suspeito, (SelectList)ViewBag.Suspeitos, "selecione ...", new { @class="form-control" })
+                        @Html.ValidationMessageFor(x => x.Suspeito)
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Arma)
+                        @Html.DropDownListFor(x => x.Arma, (SelectList)ViewBag.Armas, "selecione ...", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.Arma)
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Local)
+                        @Html.DropDownListFor(x => x.Local, (SelectList)ViewBag.Locais, "selecione ...", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.Local)
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group text-right">
+                        <input type="submit" value="Salvar" class="btn btn-primary" />
+                    </div>
+
+                </div>
+            </div>
+
+        </fieldset>
+    </div>
+}
+
+
+
+

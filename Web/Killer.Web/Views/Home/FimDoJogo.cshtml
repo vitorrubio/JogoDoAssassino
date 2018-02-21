@@ -1,0 +1,13 @@
+﻿@model Killer.Web.Models.TeoriaViewModel
+
+@{
+    ViewBag.Title = "Fim Do Jogo";
+}
+
+<h2>Parabéns, você solucionou o caso</h2>
+
+
+<h3>@ViewBag.Message</h3>
+
+
+@Html.ActionLink("Novo Jogo", "Index", null, new { @class = "btn btn-primary"})

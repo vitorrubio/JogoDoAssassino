@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Descubra o Assassino";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>
+    O empresário Sean Bean foi assassinado e o corpo dele foi deixado na frente da delegacia de polícia. Você é o Inspetor Jacques
+    Clouseau e foi escolhido para investigar este caso. Após uma série de investigações, você organizou uma lista com
+    prováveis assassinos, os locais do crime e quais armas poderiam ter sido utilizadas, porém a sua única testemunha só pode responder caso você tenha uma teoria. 
+</p>
+
+<p>
+    Você deve "chutar" um assassino, um local e uma arma. A testemunha apenas vai dizer se você solucionou o caso, ou vai dizer algum elemento errado em sua teoria, por exemplo, mesmo que todos os seus palpites estejam errados, a testemunha pode falar simplesmente que o Local do Crime está errado.
+</p>
+
+<p>
+    Você deverá utilizar a lógica e eliminação para providenciar palpites melhores. 
+</p>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<div class="form-group  text-center">
+    <input type="submit" value="Iniciar Jogo" class="btn btn-primary" />
+</div>
+}
