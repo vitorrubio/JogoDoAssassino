@@ -1,5 +1,5 @@
 # JogoDoAssassino
-## Jogo do Assassino para avaliação de Processo Seletivo SQUID
+## Jogo do Assassino para avaliação de Processo Seletivo Digipix
 
 
 Avaliação Hands-on - Descubra o assassino
