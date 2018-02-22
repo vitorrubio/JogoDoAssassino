@@ -76,6 +76,8 @@ solução do caso e perguntar se ele quer investigar um novo “crime”.
 ### ESPECIFICAÇÕES
 * A entrega esperada é:
   * Um desenho da sugestão de arquitetura para navegador e para app mobile
+	* [Diagrama de Pacotes](https://github.com/vitorrubio/JogoDoAssassino/blob/master/Docs/DiagramaDePacotes.pdf)
+	* [Diagrama de Classes](https://github.com/vitorrubio/JogoDoAssassino/blob/master/Docs/Killer-Uml-Class.pdf)
   * [Descrição dos motivos que levaram às escolhas das ferramentas ou técnicas sugeridas](https://github.com/vitorrubio/JogoDoAssassino/blob/master/Docs/README.MD)
   * Uma POC funcional do jogo para navegador
     * Linguagem C#
