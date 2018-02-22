@@ -49,13 +49,13 @@ Se a teoria estiver correta (assassino, local e arma corretos), ela responde 0. 
 * Se mais de uma suposição está incorreta, ela retorna um valor arbitrário entre as que estão incorretos (isso é
 totalmente aleatório). Por exemplo, se o assassino for Khan em Springfield usando uma Peixeira:
 * Teoria: 1, 1, 1 (Esqueleto, Etérnia, Cajado Devastador) 
-..* o Retorno: 1, ou 2, ou 3 (todos estão incorretos)
+  * o Retorno: 1, ou 2, ou 3 (todos estão incorretos)
 * Teoria: 6, 4, 5 (Duende Verde, Springfield, Sabre de Luz)
-..* o Retorno: 1, ou 3 (somente o local está correto)
+  * o Retorno: 1, ou 3 (somente o local está correto)
 * Teoria: 5, 4, 3 (Coringa, Springfield, Peixeira)
-..* o Retorno: 1 (somente o assassino está incorreto)
+  * o Retorno: 1 (somente o assassino está incorreto)
 * Teoria: 2, 4, 3
-..* o Retorno: 0 (todos corretos, você solucionou o caso)
+  * o Retorno: 0 (todos corretos, você solucionou o caso)
 
 
 Você precisa desenvolver uma solução que simule a testemunha para ajudar Clouseau a resolver o caso, seguindo as
@@ -66,17 +66,17 @@ aleatoriamente.
 (Suspeito, Local e Arma)
 * O sistema deve então confrontar a teoria do Inspetor Closeau (usuário) com o crime atual (sorteado ao
 iniciar o jogo) e responder uma das três alternativas descritas:
-..* Assassino incorreto
-..* Local incorreto
-..* Arma incorreta
+  * Assassino incorreto
+  * Local incorreto
+  * Arma incorreta
 * O jogo continua com o usuário enviando novas “teorias” até que o crime seja desvendado
 * Quando o inspetor Clouseau descobrir o suspeito o local e a arma acaba o jogo, dando os parabéns pela
 solução do caso e perguntar se ele quer investigar um novo “crime”.
 
 ### ESPECIFICAÇÕES
 * A entrega esperada é:
-..* Um desenho da sugestão de arquitetura para navegador e para app mobile
-..* o Descrição dos motivos que levaram às escolhas das ferramentas ou técnicas sugeridas
-..* o Uma POC funcional do jogo para navegador
-...* Linguagem C#
-...* MVC (respeitando padrões de desenvolvimento)
+  * Um desenho da sugestão de arquitetura para navegador e para app mobile
+  * o Descrição dos motivos que levaram às escolhas das ferramentas ou técnicas sugeridas
+  * o Uma POC funcional do jogo para navegador
+   * Linguagem C#
+   * MVC (respeitando padrões de desenvolvimento)
