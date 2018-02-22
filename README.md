@@ -76,7 +76,7 @@ solução do caso e perguntar se ele quer investigar um novo “crime”.
 ### ESPECIFICAÇÕES
 * A entrega esperada é:
   * Um desenho da sugestão de arquitetura para navegador e para app mobile
-  * [Descrição dos motivos que levaram às escolhas das ferramentas ou técnicas sugeridas](https://github.com/vitorrubio/JogoDoAssassino/Docs/Readme.md)
+  * [Descrição dos motivos que levaram às escolhas das ferramentas ou técnicas sugeridas](https://github.com/vitorrubio/JogoDoAssassino/Docs/README.md)
   * Uma POC funcional do jogo para navegador
     * Linguagem C#
     * MVC (respeitando padrões de desenvolvimento)
