@@ -1,5 +1,5 @@
 # Como foi Desenvolvido
-=========================
+
 O sistema foi dividido em 4 camadas, segundo os princípios do DDD
 * Uma camada de domínio, com as entidades de negócio e suas regras, que chamei de Killer.Core
 * Uma camada de Infraestrutura com classes e métodos que poderiam ser utilizados pela aplicação em si, mas não são referentes as regras de negócio. Nela coloquei um extension method para obter as descrições dos Enums. Chamei ela de Killer.Infra
