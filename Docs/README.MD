@@ -1,4 +1,4 @@
-#Como foi Desednvolvido
+# Como foi Desenvolvido
 =========================
 O sistema foi dividido em 4 camadas, segundo os princípios do DDD
 * Uma camada de domínio, com as entidades de negócio e suas regras, que chamei de Killer.Core
