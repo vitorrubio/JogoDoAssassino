@@ -21,6 +21,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Killer.Core", "Core\Killer.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Killer.Core.Test", "Core\Killer.Core.Test\Killer.Core.Test.csproj", "{F05BF44E-36F6-4166-BC2A-99AF99C6EEAF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xamarin", "Xamarin", "{2BB829E5-4F4A-4821-B962-2796BA536F47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Killer.Xamarin", "Xamarin\Killer.Xamarin\Killer.Xamarin.csproj", "{3C1C6774-8504-4F88-AC71-8FE414E75410}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +51,12 @@ Global
 		{F05BF44E-36F6-4166-BC2A-99AF99C6EEAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F05BF44E-36F6-4166-BC2A-99AF99C6EEAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F05BF44E-36F6-4166-BC2A-99AF99C6EEAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C1C6774-8504-4F88-AC71-8FE414E75410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C1C6774-8504-4F88-AC71-8FE414E75410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C1C6774-8504-4F88-AC71-8FE414E75410}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3C1C6774-8504-4F88-AC71-8FE414E75410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C1C6774-8504-4F88-AC71-8FE414E75410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C1C6774-8504-4F88-AC71-8FE414E75410}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +67,7 @@ Global
 		{8F42F409-FB34-4F67-ACFA-20C43B791930} = {B8A964BD-7BAE-4550-BC9C-E89EFB4C4E71}
 		{86D5C281-A998-4E31-88FE-F32CB1A61561} = {86111066-977A-4FB1-B2E8-3C216D27B34E}
 		{F05BF44E-36F6-4166-BC2A-99AF99C6EEAF} = {86111066-977A-4FB1-B2E8-3C216D27B34E}
+		{3C1C6774-8504-4F88-AC71-8FE414E75410} = {2BB829E5-4F4A-4821-B962-2796BA536F47}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2BA3CB46-C726-4F05-BC84-71FF32897919}
