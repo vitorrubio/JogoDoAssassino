@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{31831621-7721-4C80-8A34-31DD214D9349}"
 EndProject
@@ -25,7 +25,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xamarin", "Xamarin", "{2BB8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Killer.Xamarin", "Xamarin\Killer.Xamarin\Killer.Xamarin.csproj", "{3C1C6774-8504-4F88-AC71-8FE414E75410}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Killer.Xamarin.Forms.Android", "Xamarin\Killer.Xamarin.Forms\Killer.Xamarin.Forms.Android\Killer.Xamarin.Forms.Android.csproj", "{C30D235B-FE99-40CF-BE83-7B8EA5B0291D}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Killer.Xamarin.Forms", "Xamarin\Killer.Xamarin.Forms\Killer.Xamarin.Forms\Killer.Xamarin.Forms.shproj", "{8C7E9510-6009-4A61-9C16-B7E1F6943B2C}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Xamarin\Killer.Xamarin.Forms\Killer.Xamarin.Forms\Killer.Xamarin.Forms.projitems*{8c7e9510-6009-4a61-9c16-b7e1f6943b2c}*SharedItemsImports = 13
+		Xamarin\Killer.Xamarin.Forms\Killer.Xamarin.Forms\Killer.Xamarin.Forms.projitems*{c30d235b-fe99-40cf-be83-7b8ea5b0291d}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -57,6 +65,12 @@ Global
 		{3C1C6774-8504-4F88-AC71-8FE414E75410}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C1C6774-8504-4F88-AC71-8FE414E75410}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3C1C6774-8504-4F88-AC71-8FE414E75410}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C30D235B-FE99-40CF-BE83-7B8EA5B0291D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C30D235B-FE99-40CF-BE83-7B8EA5B0291D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C30D235B-FE99-40CF-BE83-7B8EA5B0291D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C30D235B-FE99-40CF-BE83-7B8EA5B0291D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C30D235B-FE99-40CF-BE83-7B8EA5B0291D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C30D235B-FE99-40CF-BE83-7B8EA5B0291D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +82,7 @@ Global
 		{86D5C281-A998-4E31-88FE-F32CB1A61561} = {86111066-977A-4FB1-B2E8-3C216D27B34E}
 		{F05BF44E-36F6-4166-BC2A-99AF99C6EEAF} = {86111066-977A-4FB1-B2E8-3C216D27B34E}
 		{3C1C6774-8504-4F88-AC71-8FE414E75410} = {2BB829E5-4F4A-4821-B962-2796BA536F47}
+		{C30D235B-FE99-40CF-BE83-7B8EA5B0291D} = {2BB829E5-4F4A-4821-B962-2796BA536F47}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2BA3CB46-C726-4F05-BC84-71FF32897919}

@@ -1,5 +1,5 @@
 # JogoDoAssassino
-## Jogo do Assassino para avaliação de Processo Seletivo Digipix
+## Jogo do Assassino para avaliação de Processo Seletivo Eniwine
 
 
 Avaliação Hands-on - Descubra o assassino
