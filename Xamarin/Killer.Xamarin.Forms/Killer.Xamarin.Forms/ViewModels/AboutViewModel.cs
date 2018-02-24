@@ -9,7 +9,7 @@ namespace Killer.Xamarin.Forms.ViewModels
     {
         public AboutViewModel()
         {
-            Title = "About";
+            Title = "Sobre";
 
             OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://xamarin.com/platform")));
         }

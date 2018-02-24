@@ -10,6 +10,8 @@ using Xamarin.Forms.Xaml;
 using Killer.Xamarin.Forms.Models;
 using Killer.Xamarin.Forms.Views;
 using Killer.Xamarin.Forms.ViewModels;
+using Killer.Core.DomainModel;
+using Killer.Core;
 
 namespace Killer.Xamarin.Forms.Views
 {
@@ -17,37 +19,55 @@ namespace Killer.Xamarin.Forms.Views
 	public partial class ItemsPage : ContentPage
 	{
         ItemsViewModel viewModel;
+		public static Testemunha TestemunhaDoCrime;
 
-        public ItemsPage()
+		public ItemsPage()
         {
             InitializeComponent();
 
             BindingContext = viewModel = new ItemsViewModel();
-        }
 
-        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+			TestemunhaDoCrime = RandomCrimeGenerator.TestemunharAssassinato();
+		}
+
+        async void OnArmaSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as Item;
+            var item = args.SelectedItem as Armas?;
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
-
-            // Manually deselect item.
-            ItemsListView.SelectedItem = null;
+			await Task.FromResult(0);
         }
 
-        async void AddItem_Clicked(object sender, EventArgs e)
+		async void OnSuspeitoSelected(object sender, SelectedItemChangedEventArgs args)
+		{
+			var item = args.SelectedItem as Suspeitos?;
+			if (item == null)
+				return;
+
+			await Task.FromResult(0);
+		}
+
+
+		async void OnLocalSelected(object sender, SelectedItemChangedEventArgs args)
+		{
+			var item = args.SelectedItem as Locais?;
+			if (item == null)
+				return;
+
+			await Task.FromResult(0);
+		}
+
+		void NovoJogo_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
-        }
+			TestemunhaDoCrime = RandomCrimeGenerator.TestemunharAssassinato();
+		}
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
 
-            if (viewModel.Items.Count == 0)
-                viewModel.LoadItemsCommand.Execute(null);
+            viewModel.LoadItemsCommand.Execute(null);
         }
     }
 }

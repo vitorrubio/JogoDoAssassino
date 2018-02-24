@@ -9,19 +9,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{86111066-9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{4FC9E0D8-C706-4C83-AB17-A8D30EDCDAC0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{B8A964BD-7BAE-4550-BC9C-E89EFB4C4E71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xamarin", "Xamarin", "{2BB829E5-4F4A-4821-B962-2796BA536F47}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Killer.Services", "Services\Killer.Services\Killer.Services.csproj", "{1F98E260-A6BE-4EB2-809D-A292DD91C3F7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Killer.Web", "Web\Killer.Web\Killer.Web.csproj", "{8E77DC6F-0F94-4E3E-9032-C5A8846889B1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Killer.Infra", "Infra\Killer.Infra\Killer.Infra.csproj", "{8F42F409-FB34-4F67-ACFA-20C43B791930}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{B8A964BD-7BAE-4550-BC9C-E89EFB4C4E71}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Killer.Core", "Core\Killer.Core\Killer.Core.csproj", "{86D5C281-A998-4E31-88FE-F32CB1A61561}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Killer.Core.Test", "Core\Killer.Core.Test\Killer.Core.Test.csproj", "{F05BF44E-36F6-4166-BC2A-99AF99C6EEAF}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xamarin", "Xamarin", "{2BB829E5-4F4A-4821-B962-2796BA536F47}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Killer.Xamarin", "Xamarin\Killer.Xamarin\Killer.Xamarin.csproj", "{3C1C6774-8504-4F88-AC71-8FE414E75410}"
 EndProject

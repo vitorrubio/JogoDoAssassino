@@ -12,24 +12,27 @@ namespace Killer.Xamarin.Forms.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
-        public ObservableCollection<Item> Items { get; set; }
-        public Command LoadItemsCommand { get; set; }
+
+		public ObservableCollection<Tuple<int, string>> Suspeitos { get; set; }
+		public ObservableCollection<Tuple<int, string>> Armas { get; set; }
+		public ObservableCollection<Tuple<int, string>> Locais { get; set; }
+		public Command LoadItemsCommand { get; set; }
 
         public ItemsViewModel()
         {
-            Title = "Browse";
-            Items = new ObservableCollection<Item>();
-            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+            Title = "Jogo";
 
-            MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
-            {
-                var _item = item as Item;
-                Items.Add(_item);
-                await DataStore.AddItemAsync(_item);
-            });
+
+			Suspeitos = new ObservableCollection<Tuple<int, string>>();
+			Armas = new ObservableCollection<Tuple<int, string>>();
+			Locais = new ObservableCollection<Tuple<int, string>>();
+
+			LoadItemsCommand = new Command( () =>  ExecuteLoadItemsCommand());
+
+
         }
 
-        async Task ExecuteLoadItemsCommand()
+        void ExecuteLoadItemsCommand()
         {
             if (IsBusy)
                 return;
@@ -38,8 +41,11 @@ namespace Killer.Xamarin.Forms.ViewModels
 
             try
             {
-                Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
+				Suspeitos.Clear();
+				Armas.Clear();
+				Locais.Clear();
+
+
                 foreach (var item in items)
                 {
                     Items.Add(item);
