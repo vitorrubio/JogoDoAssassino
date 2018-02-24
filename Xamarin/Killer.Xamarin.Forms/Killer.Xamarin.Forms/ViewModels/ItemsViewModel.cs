@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-using Killer.Xamarin.Forms.Models;
 using Killer.Xamarin.Forms.Views;
+using Killer.Services;
 
 namespace Killer.Xamarin.Forms.ViewModels
 {
@@ -17,6 +17,8 @@ namespace Killer.Xamarin.Forms.ViewModels
 		public ObservableCollection<Tuple<int, string>> Armas { get; set; }
 		public ObservableCollection<Tuple<int, string>> Locais { get; set; }
 		public Command LoadItemsCommand { get; set; }
+
+		public string Resultado { get; set; }
 
         public ItemsViewModel()
         {
@@ -46,11 +48,21 @@ namespace Killer.Xamarin.Forms.ViewModels
 				Locais.Clear();
 
 
-                foreach (var item in items)
+                foreach (var item in (new SuspeitoService()).GetSuspeitos())
                 {
-                    Items.Add(item);
+					Suspeitos.Add(new Tuple<int, string>(item.Key, item.Value));
                 }
-            }
+
+				foreach (var item in (new ArmaService()).GetArmas())
+				{
+					Armas.Add(new Tuple<int, string>(item.Key, item.Value));
+				}
+
+				foreach (var item in (new LocalService()).GetLocais())
+				{
+					Locais.Add(new Tuple<int, string>(item.Key, item.Value));
+				}
+			}
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
