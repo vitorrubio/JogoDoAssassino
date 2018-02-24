@@ -16,7 +16,10 @@ namespace Killer.Xamarin.Forms.ViewModels
 		public ObservableCollection<Tuple<int, string>> Suspeitos { get; set; }
 		public ObservableCollection<Tuple<int, string>> Armas { get; set; }
 		public ObservableCollection<Tuple<int, string>> Locais { get; set; }
-		public Command LoadItemsCommand { get; set; }
+
+		public Command LoadSuspeitosCommand { get; set; }
+		public Command LoadArmasCommand { get; set; }
+		public Command LoadLocaisCommand { get; set; }
 
 		public string Resultado { get; set; }
 
@@ -29,12 +32,12 @@ namespace Killer.Xamarin.Forms.ViewModels
 			Armas = new ObservableCollection<Tuple<int, string>>();
 			Locais = new ObservableCollection<Tuple<int, string>>();
 
-			LoadItemsCommand = new Command( () =>  ExecuteLoadItemsCommand());
+			LoadSuspeitosCommand = new Command( () => ExecuteLoadSuspeitosCommand());
+			LoadArmasCommand = new Command(() => ExecuteLoadArmasCommand());
+			LoadLocaisCommand = new Command(() => ExecuteLoadLocaisCommand());
+		}
 
-
-        }
-
-        void ExecuteLoadItemsCommand()
+        void ExecuteLoadSuspeitosCommand()
         {
             if (IsBusy)
                 return;
@@ -44,8 +47,7 @@ namespace Killer.Xamarin.Forms.ViewModels
             try
             {
 				Suspeitos.Clear();
-				Armas.Clear();
-				Locais.Clear();
+
 
 
                 foreach (var item in (new SuspeitoService()).GetSuspeitos())
@@ -53,15 +55,6 @@ namespace Killer.Xamarin.Forms.ViewModels
 					Suspeitos.Add(new Tuple<int, string>(item.Key, item.Value));
                 }
 
-				foreach (var item in (new ArmaService()).GetArmas())
-				{
-					Armas.Add(new Tuple<int, string>(item.Key, item.Value));
-				}
-
-				foreach (var item in (new LocalService()).GetLocais())
-				{
-					Locais.Add(new Tuple<int, string>(item.Key, item.Value));
-				}
 			}
             catch (Exception ex)
             {
@@ -72,5 +65,69 @@ namespace Killer.Xamarin.Forms.ViewModels
                 IsBusy = false;
             }
         }
-    }
+
+
+
+		void ExecuteLoadArmasCommand()
+		{
+			if (IsBusy)
+				return;
+
+			IsBusy = true;
+
+			try
+			{
+
+				Armas.Clear();
+
+
+
+
+				foreach (var item in (new ArmaService()).GetArmas())
+				{
+					Armas.Add(new Tuple<int, string>(item.Key, item.Value));
+				}
+
+
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex);
+			}
+			finally
+			{
+				IsBusy = false;
+			}
+		}
+
+
+
+		void ExecuteLoadLocaisCommand()
+		{
+			if (IsBusy)
+				return;
+
+			IsBusy = true;
+
+			try
+			{
+
+				Locais.Clear();
+
+
+				foreach (var item in (new LocalService()).GetLocais())
+				{
+					Locais.Add(new Tuple<int, string>(item.Key, item.Value));
+				}
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex);
+			}
+			finally
+			{
+				IsBusy = false;
+			}
+		}
+	}
 }

@@ -5,13 +5,15 @@
               Title="{Binding Title}"
              x:Name="BrowseItemsPage">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Novo Jogo" Clicked="NovoJogo_Clicked" />
-        <ToolbarItem Text="Palpitar" Clicked="Palpitar_Clicked" />
+        <!--<ToolbarItem Text="Novo Jogo" Clicked="NovoJogo_Clicked" />
+        <ToolbarItem Text="Palpitar" Clicked="Palpitar_Clicked" />-->
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            <Span Text="{Binding Resultado}" />
-            <Span Text="Selecione o suspeito" />
+            <!--<Label Text="{Binding Resultado}" />-->
+            
+            
+            <!--<Label Text="Selecione o suspeito" />
             <ListView x:Name="SuspeitosListView" 
                 ItemsSource="{Binding Suspeitos}"
                 VerticalOptions="FillAndExpand"
@@ -39,7 +41,7 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <Span Text="Selecione a  Arma" />
+            <Label Text="Selecione a  Arma" />
             <ListView x:Name="ArmasListView" 
                 ItemsSource="{Binding Armas}"
                 VerticalOptions="FillAndExpand"
@@ -67,7 +69,7 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <Span Text="Selecione o local" />
+            <Label Text="Selecione o local" />
             <ListView x:Name="LocaisListView" 
                 ItemsSource="{Binding Locais}"
                 VerticalOptions="FillAndExpand"
@@ -93,7 +95,9 @@
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            </ListView>
+            </ListView>-->
+            
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

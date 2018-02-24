@@ -20,9 +20,9 @@ namespace Killer.Xamarin.Forms.Views
         ItemsViewModel viewModel;
 		public static Testemunha TestemunhaDoCrime;
 
-		Tuple<int, string> _suspeito;
-		Tuple<int, string> _arma;
-		Tuple<int, string> _local;
+		public Tuple<int, string> _suspeito;
+		public Tuple<int, string> _arma;
+		public Tuple<int, string> _local;
 
 		public ItemsPage()
         {
@@ -33,9 +33,9 @@ namespace Killer.Xamarin.Forms.Views
 			TestemunhaDoCrime = RandomCrimeGenerator.TestemunharAssassinato();
 		}
 
-        async void OnArmaSelected(object sender, SelectedItemChangedEventArgs args)
+		public async void OnArmaSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var _arma = args.SelectedItem as Tuple<int, string>;
+            _arma = args.SelectedItem as Tuple<int, string>;
             if (_arma == null)
                 return;
 
@@ -43,9 +43,9 @@ namespace Killer.Xamarin.Forms.Views
 			await Task.FromResult(0);
         }
 
-		async void OnSuspeitoSelected(object sender, SelectedItemChangedEventArgs args)
+		public async void OnSuspeitoSelected(object sender, SelectedItemChangedEventArgs args)
 		{
-			var _suspeito = args.SelectedItem as Tuple<int, string>;
+			_suspeito = args.SelectedItem as Tuple<int, string>;
 			if (_suspeito == null)
 				return;
 
@@ -53,21 +53,21 @@ namespace Killer.Xamarin.Forms.Views
 		}
 
 
-		async void OnLocalSelected(object sender, SelectedItemChangedEventArgs args)
+		public async void OnLocalSelected(object sender, SelectedItemChangedEventArgs args)
 		{
-			var _local = args.SelectedItem as Tuple<int, string>;
+			_local = args.SelectedItem as Tuple<int, string>;
 			if (_local == null)
 				return;
 
 			await Task.FromResult(0);
 		}
 
-		void NovoJogo_Clicked(object sender, EventArgs e)
+		public void NovoJogo_Clicked(object sender, EventArgs e)
         {
 			TestemunhaDoCrime = RandomCrimeGenerator.TestemunharAssassinato();
 		}
 
-		void Palpitar_Clicked(object sender, EventArgs e)
+		public void Palpitar_Clicked(object sender, EventArgs e)
 		{
 			if (_suspeito == null || _local  == null|| _arma == null)
 			{
@@ -106,7 +106,9 @@ namespace Killer.Xamarin.Forms.Views
         {
             base.OnAppearing();
 
-            viewModel.LoadItemsCommand.Execute(null);
-        }
+            viewModel.LoadArmasCommand.Execute(null);
+			viewModel.LoadLocaisCommand.Execute(null);
+			viewModel.LoadSuspeitosCommand.Execute(null);
+		}
     }
 }
